@@ -3,6 +3,9 @@ LABEL maintainer "Chris Zervakis"
 
 ENV container=docker
 
+# Fix for UnicodeDecodeError when using pip
+ENV LANG C.UTF-8
+
 # Install Ansible via pip so we get the latest version.
 ENV ansible_packages "ansible"
 
