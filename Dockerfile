@@ -31,7 +31,7 @@ RUN yum makecache fast \
         rm -f /lib/systemd/system/basic.target.wants/*;\
         rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-RUN pip3 install -U pip
+RUN pip3 install -U pip==20.3.4
 RUN pip3 install --no-cache $ansible_packages
 
 VOLUME ["/sys/fs/cgroup"]
